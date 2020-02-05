@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProjectVehicle
 {
-    class Vehicle
+    class Vehicle1
     {
-
         private string vehicleName;
         public const int MaxSpeed = 60;
         private string _vehicleColor;
         private int _noOfWheels;
-        public Vehicle(string vehicleName)
+        public Vehicle1(string vehicleName)
         {
             this.vehicleName = vehicleName;
         }
@@ -61,3 +60,4 @@ namespace ProjectVehicle
         }
     }
 }
+

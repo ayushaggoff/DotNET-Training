@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProjectVehicle
 {
-    class Program
+    class VehicleMain
     {
         static void Main(string[] args)
         {
             int vehicleSpeed = 0;
             int choice = 0;
-            Vehicle objVehicle = new Vehicle("Cyber");
+            Vehicle1 objVehicle = new Vehicle1("Cyber");
 
             while (choice != 4)
             {
