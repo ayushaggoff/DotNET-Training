@@ -42,9 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Person.cs" />
+    <Compile Include="PersonMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vehicle1.cs" />
-    <Compile Include="VehicleMain.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
