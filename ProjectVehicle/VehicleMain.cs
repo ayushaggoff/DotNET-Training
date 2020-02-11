@@ -56,7 +56,6 @@ namespace ProjectProblem
             }
             Console.WriteLine();
             Console.Write("Sum:" + sum);
-
             Console.ReadKey();
             Console.WriteLine("#3 show the string with sum of String length & length (of length of String) ");
             Console.Write("Enter the sentance:");
