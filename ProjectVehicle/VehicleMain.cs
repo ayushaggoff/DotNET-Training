@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectProblem
 {
-    class VehicleMain
+    class Problem
     {
         static void Main(string[] args)
         {
