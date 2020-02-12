@@ -6,45 +6,68 @@ using System.Threading.Tasks;
 
 namespace Project
 {
-    enum Months { Jan = 1, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec }
+    enum Months
+    {
+        january,
+        february,
+        march,
+        april,
+        may,
+        june,
+        july,
+        august,
+        september,
+        october,
+        november,
+        december
+    }
     class Person
     {
-        static public int NoOfDays()
+        public static int DisplayDays(Dictionary<Months, int> dict, string monthName)
         {
-            int ans1=0;
-            Console.WriteLine("Enter the month first free alphabets(eg. for march give input:Mar):");
-            string month = Console.ReadLine();
-            Dictionary<Months,int> days =new Dictionary<Months,int>();
-            foreach (KeyValuePair<Months,int> item in days)
+            int noOfDays = 0;
+            foreach (KeyValuePair<Months, int> ele1 in dict)
             {
-                if (month == item.Key.ToString())
+                if (ele1.Key.ToString() == monthName)
                 {
-                    return ans1 = item.Value;
+                    return ele1.Value;
                 }
             }
-            return ans1;
+            return noOfDays;
         }
         static void Main(string[] args)
         {
-            Dictionary<Months,int> days = new Dictionary<Months, int>();
-            days.Add(Months.Jan,31);
-            days.Add(Months.Feb,29);
-            days.Add(Months.Mar,31);
-            days.Add(Months.Apr, 30);
-            days.Add(Months.May, 31);
-            days.Add(Months.Jun, 30);
-            days.Add(Months.Jul, 31);
-            days.Add(Months.Aug, 31);
-            days.Add(Months.Sep, 30);
-            days.Add(Months.Oct, 31);
-            days.Add(Months.Nov, 30);
-            days.Add(Months.Dec, 31);
-
-            int ans = NoOfDays();
-                Console.WriteLine("No Of Days:"+ans);
+            int noOfDays = 0;
+            Dictionary<Months, int> months = new Dictionary<Months, int>();
+            months.Add(Months.january, 31);
+            months.Add(Months.february, 28);
+            months.Add(Months.march, 31);
+            months.Add(Months.april, 30);
+            months.Add(Months.may, 31);
+            months.Add(Months.june, 30);
+            months.Add(Months.july, 31);
+            months.Add(Months.august, 31);
+            months.Add(Months.september, 30);
+            months.Add(Months.october, 31);
+            months.Add(Months.november, 30);
+            months.Add(Months.december, 31);
+            Console.WriteLine("To Find Number of Days:");
+            Console.Write("Enter Any Month :  ");
+            string readMonth = Console.ReadLine();
+            readMonth = readMonth.ToLower();
+            noOfDays = DisplayDays(months, readMonth);
+            Console.WriteLine();
+            if (noOfDays == 0)
+            {
+                Console.WriteLine("!Enter the correct Month");
+            }
+            else
+            {
+                Console.WriteLine("Number of Days:" + noOfDays);
+            }
             Console.ReadKey();
         }
-}
+    }
 
 
 
