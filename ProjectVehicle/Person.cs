@@ -23,7 +23,7 @@ namespace Project
     }
     class Person
     {
-        public static int DisplayDays(Dictionary<Months, int> dict, string monthName)
+        /*public static int DisplayDays(Dictionary<Months, int> dict, string monthName)
         {
             int noOfDays = 0;
             foreach (KeyValuePair<Months, int> ele1 in dict)
@@ -34,9 +34,51 @@ namespace Project
                 }
             }
             return noOfDays;
-        }
+        }*/
         static void Main(string[] args)
         {
+            Console.WriteLine("Exception Handling:try catch implementation");
+            Console.Write("Enter an operator (+, -, *,): ");
+            string choice = Console.ReadLine();
+            Console.WriteLine();
+            Console.Write("Enter two operands: ");
+            int first = int.Parse(Console.ReadLine());
+            int second = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            
+            switch (choice)
+            {
+                case "+":
+                    int result = first + second;
+                    Console.WriteLine(first +"+" +second+": " + result);
+                    break;
+                case "-":
+                    result = first - second;
+                    Console.WriteLine(first + "-" + second + ": " + result);
+                    break;
+                case "*":
+                    result = first * second;
+                    Console.WriteLine(first + "*" + second + ": " + result);
+                    break;
+                case "/":
+                    try
+                        {
+                        result = first / second;
+                        Console.WriteLine(first + "/" + second + ": " + result);
+                    }catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
+                    break;
+                // operator doesn't match any case constant
+                default:
+                    Console.WriteLine("Error! operator is not correct");
+                    break;
+            }
+
+
+
+            /*
             int noOfDays = 0;
             Dictionary<Months, int> months = new Dictionary<Months, int>();
             months.Add(Months.january, 31);
@@ -64,11 +106,10 @@ namespace Project
             else
             {
                 Console.WriteLine("Number of Days:" + noOfDays);
-            }
+            }*/
             Console.ReadKey();
+
         }
     }
-
-
-
 }
+
