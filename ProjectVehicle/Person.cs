@@ -24,17 +24,6 @@ namespace Project
             }
             Console.WriteLine(Encoding.Default.GetString(fileByteArray));
             fs.Close();
-            string textPath1 = @"C:\Users\ayusha\Documents\test2";
-            StreamWriter sw = File.CreateText(textPath1);
-            sw.Write("THis a random text 2 ");
-            sw.WriteLine("Sentence 1");
-            sw.WriteLine("Sentence 2");
-            sw.Close();
-            StreamReader sr = File.OpenText(textPath1);
-            Console.WriteLine("Peek:{0}",Convert.ToChar(sr.Peek()));
-            Console.WriteLine("1st String:{0}",sr.ReadLine());
-            Console.WriteLine("Everything:{0}", sr.ReadToEnd());
-            sr.Close();
             Console.ReadKey();
         }
     }
