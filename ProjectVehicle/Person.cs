@@ -35,39 +35,57 @@ namespace Project
             }
             return noOfDays;
         }*/
+        static int Division(int x, int y)
+        {
+            if (y == 0)
+                throw new System.DivideByZeroException();
+            return x / y;
+        }
+        static int Multiply(int x, int y)
+        {
+            return x * y;
+        }
+        static int Sub(int x, int y)
+        {
+            return x - y;
+        }
+        static int Add(int x, int y)
+        {
+            return x + y;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Exception Handling:try catch implementation");
-            Console.Write("Enter an operator (+, -, *,): ");
+            Console.Write("Enter an operator (+, -, *,/): ");
             string choice = Console.ReadLine();
             Console.WriteLine();
             Console.Write("Enter two operands: ");
             int first = int.Parse(Console.ReadLine());
             int second = int.Parse(Console.ReadLine());
             Console.WriteLine();
-            
             switch (choice)
             {
                 case "+":
-                    int result = first + second;
-                    Console.WriteLine(first +"+" +second+": " + result);
+                    int result = Add(first, second);
+                    Console.WriteLine(first + "+" + second + ": " + result);
                     break;
                 case "-":
-                    result = first - second;
+                    result = Sub(first, second);
                     Console.WriteLine(first + "-" + second + ": " + result);
                     break;
                 case "*":
-                    result = first * second;
+                    result = Multiply(first, second);
                     Console.WriteLine(first + "*" + second + ": " + result);
                     break;
                 case "/":
                     try
-                        {
-                        result = first / second;
-                        Console.WriteLine(first + "/" + second + ": " + result);
-                    }catch (Exception e)
                     {
-                        Console.WriteLine(e);
+                        result = Division(first, second);
+                        Console.WriteLine(first + "/" + second + ": " + result);
+                    }
+                    catch (DivideByZeroException e)
+                    {
+                        Console.WriteLine("Attempted divide by zero.");
                     }
                     break;
                 // operator doesn't match any case constant
@@ -75,9 +93,6 @@ namespace Project
                     Console.WriteLine("Error! operator is not correct");
                     break;
             }
-
-
-
             /*
             int noOfDays = 0;
             Dictionary<Months, int> months = new Dictionary<Months, int>();
