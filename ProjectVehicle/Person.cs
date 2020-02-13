@@ -38,7 +38,7 @@ namespace Project
         static int Division(int x, int y)
         {
             if (y == 0)
-                throw new System.DivideByZeroException();
+                throw new System.Exception("User Defined Exception: Attempted divide by zero.");
             return x / y;
         }
         static int Multiply(int x, int y)
@@ -55,7 +55,7 @@ namespace Project
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Exception Handling:throw implementation");
+            Console.WriteLine("Exception Handling: User Defined Exception");
             Console.Write("Enter an operator (+, -, *,/): ");
             string choice = Console.ReadLine();
             Console.WriteLine();
@@ -83,9 +83,9 @@ namespace Project
                         result = Division(first, second);
                         Console.WriteLine(first + "/" + second + ": " + result);
                     }
-                    catch (DivideByZeroException e)
+                    catch (Exception e)
                     {
-                        Console.WriteLine("Attempted divide by zero.");
+                        Console.WriteLine(e);
                     }
                     break;
                 // operator doesn't match any case constant
