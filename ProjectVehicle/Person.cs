@@ -55,7 +55,7 @@ namespace Project
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Exception Handling:try catch implementation");
+            Console.WriteLine("Exception Handling:throw implementation");
             Console.Write("Enter an operator (+, -, *,/): ");
             string choice = Console.ReadLine();
             Console.WriteLine();
