@@ -15,7 +15,7 @@ namespace Project
         Thrusday=100
 
     }
-    class Person
+    class Person1
     {
         static void Main(string[] args)
         {
