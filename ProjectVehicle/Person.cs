@@ -7,11 +7,24 @@ using System.Threading.Tasks;
 
 namespace Project
 {
+    enum Weeks
+    {
+        Monday=12,
+        Tuesday=15,
+        Wedneday=33,
+        Thrusday=100
+
+    }
     class Person
     {
         static void Main(string[] args)
         {
-            string textPath = @"C:\Users\ayusha\Documents\test1";
+            foreach (string str in Enum.GetValues(typeof(Weeks)))
+            {
+                Console.WriteLine(str);
+            }
+            Console.ReadKey();
+            /*string textPath = @"C:\Users\ayusha\Documents\test1";
             FileStream fs = File.Open(textPath,FileMode.Create);
             string randString = "This is a ramdom string";
             byte[] rsByteArray = Encoding.Default.GetBytes(randString);
@@ -52,6 +65,7 @@ namespace Project
             Console.WriteLine(br.ReadDouble());
             br.Close();
             Console.ReadKey();
+            */
         }
     }
 }
