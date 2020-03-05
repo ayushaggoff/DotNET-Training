@@ -18,7 +18,7 @@ namespace DetailsTask
         public string State { get; set; }
         public string Email { get; set; }
         public string Mobile { get; set; }
-
+        public int Age { get; set; }
         public int Insert()
         {
             int flag = 0;
