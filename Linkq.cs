@@ -32,18 +32,18 @@ namespace DetailsTask
             //    Console.Write(name + " ");
 
 
-        //    IList<Person> personList = new List<Person>() {
-        //new Person() {  Name = "John", Gender = "male"} ,
-        //new Person() {  Name = "Moin", Gender = "female" } ,
-        //new Person() { Name = "Bill",  Gender = "female" } ,
-        //new Person() { Name = "Ram" , Gender = "male"} ,
-        //new Person() {Name = "Ron" , Gender = "male" }
-        //  };
-        //    var PersonFemale = from s in personList
-        //                        where s.Gender.Equals("female")
-        //                        select s;
-        //    foreach (var nam in PersonFemale)
-        //        Console.Write(nam.Name + " ");
+            //    IList<Person> personList = new List<Person>() {
+            //new Person() {  Name = "John", Gender = "male"} ,
+            //new Person() {  Name = "Moin", Gender = "female" } ,
+            //new Person() { Name = "Bill",  Gender = "female" } ,
+            //new Person() { Name = "Ram" , Gender = "male"} ,
+            //new Person() {Name = "Ron" , Gender = "male" }
+            //  };
+            //    var PersonFemale = from s in personList
+            //                        where s.Gender.Equals("female")
+            //                        select s;
+            //    foreach (var nam in PersonFemale)
+            //        Console.Write(nam.Name + " ");
 
 
 
@@ -59,6 +59,28 @@ namespace DetailsTask
             //                          select s).ToList();
             //    foreach (var nam in PersonFemale)
             //        Console.Write(nam.Name + " ");
+
+
+
+            //===Method Syntax
+
+            //IList<string> stringList = new List<string>() {"C# Tutorials","VB.NET Tutorials","Learn C++","MVC Tutorials","Java"};
+            //var result = stringList.Where(s => s.Contains("Tutorials"));
+            //foreach (var name in result)
+            //   Console.Write(name + " ");
+
+            IList<Person> personList = new List<Person>()
+            {
+                new Person() {  Name = "John", Gender = "male"} ,
+                new Person() {  Name = "Moin", Gender = "female" } ,
+                new Person() { Name = "Bill",  Gender = "female" } ,
+                new Person() { Name = "Ram" , Gender = "male"} ,
+                new Person() {Name = "Ron" , Gender = "male" }
+                  };
+            var result = personList.Where(a=>a.Gender.Contains("male"));
+            foreach (var name in result)
+               Console.WriteLine("Name:" +name.Name+"  Gender:"+name.Gender);
+
         }
     }
 }
