@@ -13,7 +13,9 @@ namespace DetailsTask
                
         static void Main(string[] args)
         {
-            int flag = 0;
+
+
+            //int flag = 0;
             //Create Table tblPersonTask
             //SqlConnection con = new SqlConnection("data source=LAPR258\\SQLEXPRESS;integrated security=false;Initial Catalog=TestDb;User ID=sa;Password=Successive");
             //try
@@ -35,58 +37,58 @@ namespace DetailsTask
 
 
             //Insert data
-            Person objPerson = new Person();
-            Console.WriteLine("Registration");
-            Console.WriteLine("Enter the following the details");
-            Console.Write("Name: ");
-            objPerson.Name = Console.ReadLine();
-            Console.WriteLine();
-            Console.Write("Gender: ");
-            objPerson.Gender = Console.ReadLine();
-            Console.WriteLine();
-            Date:
-            Console.Write("Date Of Birth: ");
-            string line = Console.ReadLine();
-            Console.WriteLine();
-            DateTime dt;
-            while (!DateTime.TryParseExact(line, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out dt))
-            {
-                Console.WriteLine("Invalid date, please retry");
+            //Person objPerson = new Person();
+            //Console.WriteLine("Registration");
+            //Console.WriteLine("Enter the following the details");
+            //Console.Write("Name: ");
+            //objPerson.Name = Console.ReadLine();
+            //Console.WriteLine();
+            //Console.Write("Gender: ");
+            //objPerson.Gender = Console.ReadLine();
+            //Console.WriteLine();
+            //Date:
+            //Console.Write("Date Of Birth: ");
+            //string line = Console.ReadLine();
+            //Console.WriteLine();
+            //DateTime dt;
+            //while (!DateTime.TryParseExact(line, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out dt))
+            //{
+            //    Console.WriteLine("Invalid date, please retry");
 
-                goto Date;
-            }
-            objPerson.Dob = dt;
-            Console.Write("Marital Status: ");
-            objPerson.MaritalStatus = Console.ReadLine();
-            Console.WriteLine();
-            Console.Write("Address: ");
-            objPerson.Address = Console.ReadLine();
-            Console.WriteLine();
-            Console.Write("State: ");
-            objPerson.State = Console.ReadLine();
-            Console.WriteLine();
-            Console.Write("Email ID: ");
-            objPerson.Email = Console.ReadLine();
-            Console.WriteLine();
-            Mobile:
-            Console.Write("Mobile No.: ");
-            objPerson.Mobile = Console.ReadLine();
-            Console.WriteLine();
-            string temp = objPerson.Mobile;
-            if (temp.Length != 10)
-            {
-                Console.WriteLine("Provide the correct input");
-                goto Mobile;
-            }
-            flag = objPerson.Insert();
-            if (flag == 1)
-            {
-                Console.WriteLine("Data Inserted");
-            }
-            else
-            {
-                Console.WriteLine("Data is NOT Inserted");
-            }
+            //    goto Date;
+            //}
+            //objPerson.Dob = dt;
+            //Console.Write("Marital Status: ");
+            //objPerson.MaritalStatus = Console.ReadLine();
+            //Console.WriteLine();
+            //Console.Write("Address: ");
+            //objPerson.Address = Console.ReadLine();
+            //Console.WriteLine();
+            //Console.Write("State: ");
+            //objPerson.State = Console.ReadLine();
+            //Console.WriteLine();
+            //Console.Write("Email ID: ");
+            //objPerson.Email = Console.ReadLine();
+            //Console.WriteLine();
+            //Mobile:
+            //Console.Write("Mobile No.: ");
+            //objPerson.Mobile = Console.ReadLine();
+            //Console.WriteLine();
+            //string temp = objPerson.Mobile;
+            //if (temp.Length != 10)
+            //{
+            //    Console.WriteLine("Provide the correct input");
+            //    goto Mobile;
+            //}
+            //flag = objPerson.Insert();
+            //if (flag == 1)
+            //{
+            //    Console.WriteLine("Data Inserted");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Data is NOT Inserted");
+            //}
 
 
             //Update Details
