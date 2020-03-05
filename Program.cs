@@ -13,7 +13,8 @@ namespace DetailsTask
                
         static void Main(string[] args)
         {
-
+            Linkq objLinkq = new Linkq();
+            objLinkq.PracLinq();
 
             //int flag = 0;
             //Create Table tblPersonTask
