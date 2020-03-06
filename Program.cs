@@ -13,63 +13,60 @@ namespace DetailsTask
                
         static void Main(string[] args)
         {
-            List<Directory> phone = new List<Directory>()
-            {
-            };
-            string choice = "";
-            while (choice != "exit")
-            { 
-                Console.WriteLine("");
-                Console.WriteLine("Directory");
-                Console.WriteLine("Insert data");
-                Console.WriteLine("View Directory");
-                Console.WriteLine("Exit");
-                Console.Write("Enter your choice Insert or view");
-                choice=Console.ReadLine();
-                choice = choice.ToLower();
-                Directory objDirectory = new Directory();
-                switch (choice)
-                {
-                    case "insert":
-                        //
-                        int i = 0;
-                        int j = 0
-                        phonenumber:
-                        Console.Write("Please enter the phonenumber:");
-                        Int64 number;
-                        bool check = Int64.TryParse(Console.ReadLine(), out number);
-                        if (!check)
-                        {
-                            Console.WriteLine("please Enter number in numeric form");
-                            goto phonenumber;
-                        }
-                        Console.WriteLine();
-                        Console.Write("Enter Name:");
-                        string naam = Console.ReadLine();
-                        //string s;
-                        var z = (from x in phone where x.Name.Contains(naam) select x.Name).ToList();
-                        int y = z.Count();
-                        if (y > 0)
-                        {
-                            naam = naam + "_" + Convert.ToString(y);
+            //List<Directory> phone = new List<Directory>();
+       
+            //string choice = "";
+            //while (choice != "exit")
+            //{ 
+            //    Console.WriteLine("");
+            //    Console.WriteLine("Directory");
+            //    Console.WriteLine("Insert data");
+            //    Console.WriteLine("View Directory");
+            //    Console.WriteLine("Exit");
+            //    Console.Write("Enter your choice Insert or view: ");
+            //    choice=Console.ReadLine();
+            //    choice = choice.ToLower();
+            //    Directory objDirectory = new Directory();
+            //    switch (choice)
+            //    {
+            //        case "insert":
+            //            PhoneNumber:
+            //            Console.Write("Please enter the Mobile Number:");
+            //            Int64 number;
+            //            bool check = Int64.TryParse(Console.ReadLine(), out number);
+            //            if (!check)
+            //            {
+            //                Console.WriteLine("please Enter number in numeric form");
+            //                goto PhoneNumber;
+            //            }
+            //            Console.WriteLine();
+            //            Console.Write("Enter Name:");
 
-                        }
-                        phone.Add(new Directory() { Mobile = number, Name = naam });
-                        Console.WriteLine("Your record is Added");
-                        break;
-                    case "view":
-                        phone.OrderBy(x => x.Mobile);
+            //            string nameInput = Console.ReadLine();
+            //            var z = (from x in phone where x.Name.Equals(nameInput) || x.Name.StartsWith(nameInput + "_") select x.Name).ToList();
+            //            int nameCount = z.Count();
+            //            if (nameCount > 0)
+            //            {
+            //                nameInput = nameInput + "_" + Convert.ToString(nameCount);
 
-                        foreach (var na in phone)
-                        {
-                            Console.WriteLine(na.Name);
-                        }
-                        break;
-                }
-            }
-            Console.ReadKey();
-                // Linkq objLinkq = new Linkq();
-            //objLinkq.PracLinq();
+            //            }
+            //            phone.Add(new Directory() { Mobile = number, Name = nameInput });
+            //            Console.WriteLine("Your record is Added");
+            //            break;
+            //        case "view":
+            //          phone.OrderBy(x => x.Mobile);
+
+            //            foreach (var na in phone)
+            //            {
+            //                Console.WriteLine("Name:"+na.Name+" "+"Mobile:"+na.Mobile);
+            //            }
+            //            break;
+            //    }
+            //}
+            //Console.ReadKey();
+
+                 Linkq objLinkq = new Linkq();
+            objLinkq.PracLinq();
 
             //int flag = 0;
             //Create Table tblPersonTask
