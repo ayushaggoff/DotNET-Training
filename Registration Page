@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Page</title>
+</head>
+<body>
+
+<h1>Welcome to <a href="https://successive.tech/">Successive Technologies</a> Registration Page</h1>
+
+<form>
+<h4>Provide the following <span style="color:blue">Details</span></h4>
+  <img src="C:\Users\ayusha\Downloads\user.png" alt="User Pic" width="75px" height="75px"><br>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" required>&emsp;
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br>
+  Gender:
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br>
+  <label for="lmobileNo">Mobile Number:</label>
+  <input type="tel" id="lmobileNo" name="lmobileNo"   pattern="[0-9]{10}" maxlength="10" required ><br>
+  <label for="dob">Date Of Birth:</label>
+  <input type="date" id="dob" name="dob"><br>
+  <label for="txtaaddress">Address:</label>
+  <textarea name="txtaaddress" rows="4" cols="40" ></textarea><br>
+  <label for="deptName">Select the department:</label>
+  <select id="seldeptName">
+  <option value="CSE">C.S.E</option>
+  <option value="Electronic">Electronic</option>
+  <option value="Electrical">Electrical</option>
+  <option value="Mechanical">Mechanical</option>
+  </select><br>
+  Language:
+  <input type="checkbox" id="cbc3" name="cbphython" value="c#">
+  <label for="cbc3"> c#</label>
+  <input type="checkbox" id="cbjava" name="cbjava" value="Java">
+  <label for="cbjava"> Java</label>
+  <input type="checkbox" id="cbphython" name="cbphython" value="Phython">
+  <label for="cbphython"> Phython</label><br>
+  <label for="lemail">Enter your email:</label>
+  <input type="email" id="lemail" name="lemail" required><br>
+  <label for="lpwd">Password:</label>
+  <input type="password" id="lpwd" name="lpwd" minlength="6" required><br>
+  <input type="submit" value="Submit">
+  <input type="reset">
+  <hr>
+  Disclaimer
+  <ul type="square">
+  <li>Mobile Number should be 10 digits long</li>
+  <li>Password should be 6 digits long</li>
+  </ul>
+    Useful Links
+  <ol type="square">
+  <li><a href="https://successive.tech/">Successive Technologies</a> </li>
+  <li><a href="https://loves.cloud/">LovesCloud</a></li>
+  </ol>
+</form>
+</body>
+</html>
