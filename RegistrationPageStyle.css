@@ -1,0 +1,54 @@
+h1{
+	background-color:rgba(255, 99, 71, 0.2);
+}
+form{
+	
+	color:grey;
+	margin-left:25%;
+	margin-right:25%;
+	border:10px dashed red;
+	 border-top-style: solid;
+	border-width:medium;
+	 	   border-radius: 5px;
+	   background-color: powderblue;
+}
+form h4{
+	text-align:center;
+	background-color:white;
+	border-bottom-style:solid;
+}
+label{
+	color:black;
+}
+div{
+		margin-left:4%;
+		margin-bottom:2%;
+}
+img{
+	  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body{
+	 font-family: Arial, Helvetica, sans-serif;
+}
+
+#seldeptName:active {
+  color: blue;
+}
+#dob:hover {
+  background-color: yellow;
+}
+ul {
+  list-style-image: url('bullet.png');
+}
+.btnsubmit:hover{
+	background-color:blue;
+}
+.btnreset:hover{
+	background-color:red;
+}
+.btnsubmit{
+	margin-left: 40%;
+}
