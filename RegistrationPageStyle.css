@@ -1,5 +1,6 @@
 h1{
 	background-color:rgba(255, 99, 71, 0.2);
+	text-align:center;
 }
 form{
 	
@@ -7,27 +8,30 @@ form{
 	margin-left:25%;
 	margin-right:25%;
 	border:10px dashed red;
-	 border-top-style: solid;
+	border-top-style: solid;
 	border-width:medium;
-	 	   border-radius: 5px;
-	   background-color: powderblue;
+	border-radius: 5px;
+	background-color: powderblue;
 }
 form h4{
 	text-align:center;
 	background-color:white;
 	border-bottom-style:solid;
 }
+form h5{
+	margin-left:35%;
+}
 label{
 	color:black;
 }
 div{
-		margin-left:4%;
-		margin-bottom:2%;
+	margin-left:20%;
+	margin-bottom:2%;
 }
 img{
-	  display: block;
-  margin-left: auto;
-  margin-right: auto;
+	display: block;
+    margin-left: 25%;
+    margin-right: auto;
 }
 
 body{
@@ -50,5 +54,33 @@ ul {
 	background-color:red;
 }
 .btnsubmit{
-	margin-left: 40%;
+	margin-left: 25%;
+}
+
+#dob{
+	 margin-left: 16px;
+}
+#txtaaddress{
+	 margin-left: 50px;
+}
+#seldeptName{
+	 margin-left: 26px;
+}
+#email{
+	 margin-left: 70px;
+}
+#pwd{
+	 margin-left: 40px;
+}
+#txtfname{
+	 margin-left: 32px;
+}
+#txtlname{
+	 margin-left: 33px;
+}
+#rbtnmale{
+	 margin-left: 54px;
+}
+#cbc3{
+	 margin-left: 39px;
 }
