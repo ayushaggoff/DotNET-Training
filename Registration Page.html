@@ -1,52 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="RegistrationPageStyle.css">
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
 <title>Registration Page</title>
 </head>
 <body style="border-top:20px solid black">
 <div style="margin-left:15px">
- <form  >
+ <form class="form-horizontal" >
     <h4>Add Employee</h4>
 	<hr>
-<div class="row">
- <div class="col-md-2">
-
-  <label for="txtname">Name</label>
- </div>
+<div class="form-group">
+    <label class="control-label col-md-2" for="txtname">Name</label>
   <div class="col-md-4">
- <input type="text" class="form-control" id="txtname" name="txtname" ><br>
+ <input type="text" class="form-control" id="txtname" name="txtname" >
  </div>
  </div>
- <div class="row">
- <div class="col-md-2">
-  <label for="dob">Date Of Birth</label>
-   </div>
+<div class="form-group">
+    <label class="control-label col-md-2" for="dob">Date Of Birth</label>
+  
   <div class="col-md-4">
-  <input type="date" class="form-control" id="dob" name="dob" ><br>
+  <input type="date" class="form-control" id="dob" name="dob" >
    </div>
  </div>
-  <div class="row">
- <div class="col-md-2">
-  <label for="telphone">Phone</label>
-     </div>
+<div class="form-group">
+    <label class="control-label col-md-2" for="telphone">Phone</label>
   <div class="col-md-4">
   <input type="tel" class="form-control" id="telphone" name="telphone"   pattern="[0-9]{10}" maxlength="10" required ><br>
   </div>
   </div>
-    <div class="row">
- <div class="col-md-2">
-  <label for="email">Email</label> 
-   </div>
+  <div class="form-group">
+    <label class="control-label col-md-2"for="email">Email</label> 
+  
   <div class="col-md-4">
   <input type="email" class="form-control" id="email" name="email" required><br>
   </div>
   </div>
-  <div class="row">
- <div class="col-md-2">
-  <label for="seldepartname">Department</label>
-   </div>
+  <div class="form-group">
+    <label class="control-label col-md-2" for="seldepartname">Department</label>
+  
   <div class="col-md-4">
   <select id="seldepartname"  class="form-control">
   <option value="none" selected disabled hidden>             </option>
@@ -57,18 +49,16 @@
   </select><br>
   </div>
   </div>
-   <div class="row">
- <div class="col-md-2">
-  <label for="txtaaddress">Address:</label>
-     </div>
+  <div class="form-group">
+    <label class="control-label col-md-2" for="txtaaddress">Address:</label>
+     
   <div class="col-md-4">
   <textarea name="txtaaddress" class="form-control" rows="4" cols="40" id="txtaaddress" ></textarea><br>
   </div>
   </div>
-     <div class="row">
- <div class="col-md-2">
-  <label for="selstate">State</label> 
-   </div>
+     <div class="form-group">
+    <label class="control-label col-md-2" for="selstate">State</label> 
+   
   <div class="col-md-4">
  <select id="selstate" class="form-control" >
   <option value="none" selected disabled hidden>             </option>
@@ -78,10 +68,8 @@
   </select><br>
    </div>
    </div>
-      <div class="row">
- <div class="col-md-2">
-    <label for="selcity">City</label>
-	</div>
+   <div class="form-group">
+    <label class="control-label col-md-2" for="selcity">City</label>
   <div class="col-md-4">
   <select id="selcity" class="form-control">
   <option value="none" selected disabled hidden>             </option>
@@ -91,13 +79,11 @@
   <option value="Lucknow">Lucknow</option>
     <option value="karur">karur</option>
   <option value="Maddurai">Maddurai</option>
-  </select><br>
+  </select>
   </div>
   </div>
-        <div class="row">
- <div class="col-md-2">
-  <label for="txtzip">Zip:</label>
-  </div>
+        <div class="form-group">
+    <label class="control-label col-md-2" for="txtzip">Zip:</label>
   <div class="col-md-4">
   <input type="text" id="txtzip" class="form-control" name="txtzip"required><br>
   </div>
