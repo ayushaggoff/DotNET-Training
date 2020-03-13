@@ -2,67 +2,112 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="RegistrationPageStyle.css">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <title>Registration Page</title>
 </head>
-<body>
+<body style="border-top:20px solid black">
+<div style="margin-left:15px">
+ <form  >
+    <h4>Add Employee</h4>
+	<hr>
+<div class="row">
+ <div class="col-md-2">
 
-<h1>Welcome to <a href="https://successive.tech/">Successive Technologies</a> Registration Page</h1>
-
-<form>
-<h4>Registration <span style="color:blue">Form</span></h4>
-<h5>Provide the following Details</h5>
-<div>
-  <img src="C:\Users\ayusha\Downloads\user.png" alt="User Pic" width="75px" height="75px"><br>
-  <label for="txtfname">First name:</label>
-  <input type="text" id="txtfname" name="txtfname" required><br>
-  <label for="txtlname">Last name:</label>
-  <input type="text" id="txtlname" name="txtlname"><br>
-  <label>Gender:</label>
-  <input type="radio" id="rbtnmale" name="rbtngender" value="male">
-  <label for="rbtnmale">Male</label>
-  <input type="radio" id="rbtnfemale" name="rbtngender" value="female">
-  <label for="rbtnfemale">Female</label>
-  <input type="radio" id="rbtnother" name="rbtngender" value="other">
-  <label for="rbtnother">Other</label><br>
-  <label for="mobileNo">Mobile Number:</label>
-  <input type="tel" id="mobileNo" name="mobileNo"   pattern="[0-9]{10}" maxlength="10" required ><br>
-  <label for="dob">Date Of Birth:</label>
-  <input type="date" id="dob" name="dob"><br>
-  <label for="txtaaddress">Address:</label>
-  <textarea name="txtaaddress" rows="4" cols="40" id="txtaaddress" ></textarea><br>
-  <label for="deptName">Department:</label>
-  <select id="seldeptName">
-  <option value="none">Select the department</option>
+  <label for="txtname">Name</label>
+ </div>
+  <div class="col-md-4">
+ <input type="text" class="form-control" id="txtname" name="txtname" ><br>
+ </div>
+ </div>
+ <div class="row">
+ <div class="col-md-2">
+  <label for="dob">Date Of Birth</label>
+   </div>
+  <div class="col-md-4">
+  <input type="date" class="form-control" id="dob" name="dob" ><br>
+   </div>
+ </div>
+  <div class="row">
+ <div class="col-md-2">
+  <label for="telphone">Phone</label>
+     </div>
+  <div class="col-md-4">
+  <input type="tel" class="form-control" id="telphone" name="telphone"   pattern="[0-9]{10}" maxlength="10" required ><br>
+  </div>
+  </div>
+    <div class="row">
+ <div class="col-md-2">
+  <label for="email">Email</label> 
+   </div>
+  <div class="col-md-4">
+  <input type="email" class="form-control" id="email" name="email" required><br>
+  </div>
+  </div>
+  <div class="row">
+ <div class="col-md-2">
+  <label for="seldepartname">Department</label>
+   </div>
+  <div class="col-md-4">
+  <select id="seldepartname"  class="form-control">
+  <option value="none" selected disabled hidden>             </option>
   <option value="CSE">C.S.E</option>
   <option value="Electronic">Electronic</option>
   <option value="Electrical">Electrical</option>
   <option value="Mechanical">Mechanical</option>
   </select><br>
- <label> Language:</label>
-  <input type="checkbox" id="cbc3" name="cbphython" value="c#">
-  <label for="cbc3"> c#</label>
-  <input type="checkbox" id="cbjava" name="cbjava" value="Java">
-  <label for="cbjava"> Java</label>
-  <input type="checkbox" id="cbphython" name="cbphython" value="Phython">
-  <label for="cbphython"> Phython</label><br>
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
-  <label for="pwd">Password:</label>
-  <input type="password" id="pwd" name="pwd" minlength="6" required><br>
-  <input type="submit" value="Submit" class="btnsubmit">
-  <input type="reset" class="btnreset">
-  </div></form>
-  <hr>
-  Disclaimer
-  <ul type="square">
-  <li>Mobile Number should be 10 digits long</li>
-  <li>Password should be 6 digits long</li>
-  </ul>
-    Useful Links
-  <ol type="square">
-  <li><a href="https://successive.tech/">Successive Technologies</a> </li>
-  <li><a href="https://loves.cloud/">LovesCloud</a></li>
-  </ol>
-
+  </div>
+  </div>
+   <div class="row">
+ <div class="col-md-2">
+  <label for="txtaaddress">Address:</label>
+     </div>
+  <div class="col-md-4">
+  <textarea name="txtaaddress" class="form-control" rows="4" cols="40" id="txtaaddress" ></textarea><br>
+  </div>
+  </div>
+     <div class="row">
+ <div class="col-md-2">
+  <label for="selstate">State</label> 
+   </div>
+  <div class="col-md-4">
+ <select id="selstate" class="form-control" >
+  <option value="none" selected disabled hidden>             </option>
+  <option value="U.P">U.P</option>
+  <option value="Tamil Nadu">Tamil Nadu</option>
+  <option value="Sikkim">Sikkim</option>
+  </select><br>
+   </div>
+   </div>
+      <div class="row">
+ <div class="col-md-2">
+    <label for="selcity">City</label>
+	</div>
+  <div class="col-md-4">
+  <select id="selcity" class="form-control">
+  <option value="none" selected disabled hidden>             </option>
+  <option value="Gangtok">Gangtok</option>
+  <option value="Pelling">Pelling</option>
+  <option value="Kanpur">Kanpur</option>
+  <option value="Lucknow">Lucknow</option>
+    <option value="karur">karur</option>
+  <option value="Maddurai">Maddurai</option>
+  </select><br>
+  </div>
+  </div>
+        <div class="row">
+ <div class="col-md-2">
+  <label for="txtzip">Zip:</label>
+  </div>
+  <div class="col-md-4">
+  <input type="text" id="txtzip" class="form-control" name="txtzip"required><br>
+  </div>
+  </div>
+  <div class="row">
+ <div class="col-md-2 offset-md-4">
+  <input type="submit" value="Submit" class="btn btn-info">
+  <input type="reset" value="Cancel" class="btn">
+  </div>
+  </div>
+  </form></div>
 </body>
 </html>
