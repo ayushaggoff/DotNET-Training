@@ -2,134 +2,98 @@
 <html>
 <head>
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
- <script src="checkformvalidation.js"></script>
 
-<title>Registration Page</title>
+ <script>
+  const params = new URLSearchParams(document.location.search);
+var getName = params.get("name");
+const getDOB = params.get("dob");
+const getMobile=params.get("mob");
+const getEmail=params.get("email");
+const getDepartment=params.get("department");
+const getAddress=params.get("address");
+const getState=params.get("selstate");
+const getCity=params.get("selcity");
+const getZip=params.get("zip");
+const getJoiningDate=params.get("txtdateofjoin");
+
+
+window.onload = function RenderHtmlData(){
+document.getElementById('name').innerHTML=getName;
+document.getElementById('dob').innerHTML=getDOB;
+document.getElementById('mobile').innerHTML=getMobile;
+document.getElementById('email').innerHTML=getEmail;
+document.getElementById('dept').innerHTML=getDepartment;
+document.getElementById('address').innerHTML=getAddress;
+document.getElementById('state').innerHTML=getState;
+document.getElementById('city').innerHTML=getCity;
+document.getElementById('zip').innerHTML=getZip;
+document.getElementById('joiningDate').innerHTML=getJoiningDate;
+
+
+document.getElementById('empName').value=getName;
+document.getElementById('empDob').value=getDOB;
+document.getElementById('empMobile').value=getMobile;
+document.getElementById('empEmail').value=getEmail;
+document.getElementById('empDept').value=getDepartment;
+document.getElementById('empAddress').value=getAddress;
+document.getElementById('empState').value=getState;
+document.getElementById('empCity').value=getCity;
+document.getElementById('empZip').value=getZip;
+document.getElementById('empJoiningDate').value=getJoiningDate;
+};
+
+  </script>
 </head>
-<body style="border-top:20px solid black" onload="resetSelection()" >
-<div class="row">
- <div class="col-md-4 offset-md-4">
 
- <form name="addEmployee" onsubmit="return ValidateForm()"  action="#">
-    <h4>Add Employee</h4>
-	<hr>
-<div class="row">
- <div class="col-md-4">
+<body>
+<h3 style="text-align:center">Employee Data</h3>
+</br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">DOB</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Email</th>
+	  <th scope="col">Department</th>
+	  <th scope="col">Address</th>
+	  <th scope="col">State</th>
+	  <th scope="col">City</th>
+	  <th scope="col">ZipCode</th>
+	  <th scope="col">JoiningDate</th>
+	  <th scope="col">Edit/Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" id="name"></th>
+      <td id="dob"></td>
+      <td id="mobile"></td>
+      <td id="email"></td>
+	  <td id="dept"></td>
+	  <td id="address"></td>
+	  <td id="state"></td>
+	  <td id="city"></td>
+	  <td id="zip"></td>
+	  <td id="joiningDate"></td>
+	  <td id="edit">
+	  <form action="EditBootstrapForm.html">
+	  <input type="hidden"  name="name" id="empName"/>
+	  <input type="hidden"  name="dob" id="empDob" />
+	  <input type="hidden"  name="mobile" id="empMobile" />
+	  <input type="hidden"  name="email" id="empEmail" />
+	  <input type="hidden"  name="dept" id="empDept" />
+	  <input type="hidden"  name="address" id="empAddress" />
+	  <input type="hidden"  name="state" id="empState" />
+	  <input type="hidden" name="city" id="empCity" />
+	  <input type="hidden"  name="zip" id="empZip"/>
+	  <input type="hidden"  name="joiningDate" id="empJoiningDate" />
+	  <input type="submit" class="btn btn-secondary" value="Edit" onsubmit="Edit.html" />
+    <button type="button" class="btn btn-secondary">Delete</button></form></td>
+    </tr>
+  
+  </tbody>
+</table>
 
-  <label for="txtname">Name</label>
-
- </div>
-  <div class="col-md-8">
- <input type="text" class="form-control" id="name" onkeyup="ValidateForm1('name')" name="name" >
- <span id="nvname"></span><br>
- </div>
- </div>
- <div class="row">
- <div class="col-md-4">
-  <label for="dob">Date Of Birth</label>
-   </div>
-  <div class="col-md-8">
-  <input type="date" class="form-control" id="dob" onkeyup=" ValidateForm1('dob')" name="dob" >
-   <span id="nvdob"></span><br>
-   </div>
- </div>
-  <div class="row">
- <div class="col-md-4">
-  <label for="telphone">Phone</label>
-     </div>
-  <div class="col-md-8">
-  <input type="text" class="form-control" id="phone" onkeyup=" ValidateForm1('phone')" name="phone"  >
-  <span id="nvphone"></span><br>
-  </div>
-  </div>
-    <div class="row">
- <div class="col-md-4">
-  <label for="email">Email</label> 
-   </div>
-  <div class="col-md-8">
-  <input type="text" class="form-control" id="email" onkeyup=" ValidateForm1('email')" name="email">
-    <span id="nvemail"></span><br>
-  </div>
-  </div>
-  <div class="row">
- <div class="col-md-4">
-  <label for="seldepartname">Department</label>
-   </div>
-  <div class="col-md-8">
-  <select id="seldepartname"  class="form-control">
-  <option value="none" selected disabled hidden>             </option>
-  <option value="IT">IT</option>
-  <option value="Admin">Admin</option>
-  <option value="HR">HR</option>
-  <option value="BA">BA</option>
-  <option value="QA">QA</option>
-  <option value="CS">CS</option>
-  </select>
-  <span id="nvdepartname"></span><br>
-
-  </div>
-  </div>
-   <div class="row">
- <div class="col-md-4">
-  <label for="txtaaddress">Address:</label>
-     </div>
-  <div class="col-md-8">
-  <textarea name="address" class="form-control" rows="4" cols="40" id="address" onkeyup="ValidateForm1('address')" ></textarea>
-  <span id="nvaddress"></span><br>
-  </div>
-  </div>
-     <div class="row">
- <div class="col-md-4">
-  <label for="selstate">State</label> 
-   </div>
-  <div class="col-md-8">
-<select id="selstate" size="1" onchange="makeSubmenu(this.value)" class="form-control" >
-  <option value="none" selected disabled hidden>             </option>
-  <option>Odisha</option>
-<option>Maharashtra</option>
-<option>Kerala</option>
-</select>
-<span id="nvstate"></span><br>
-   </div>
-   </div>
-      <div class="row">
- <div class="col-md-4">
-    <label for="selcity">City</label>
-	</div>
-  <div class="col-md-8">
-  <select id="selcity"  class="form-control" >
-  <option value="none" selected disabled hidden>             </option>
-    <option></option>
-  </select><br>
-  </div>
-  </div>
- 
-	 <div class="row">
- <div class="col-md-4">
-  <label for="txtzip">Zip:</label>
-  </div>
-  <div class="col-md-8">
-  <input type="text" id="zip"   onkeyup="ValidateForm1('zip')" class="form-control" name="zip">
-  <span id="nvzip"></span><br>
-  </div>
-  </div>
-  <div class="row">
- <div class="col-md-4">
-  <label for="dob">Joining</label>
-   </div>
-  <div class="col-md-8">
-  <input type="date" class="form-control" id="txtdateofjoin" name="txtdateofjoin" >
-   <span id="nvdateofjoin"></span><br>
-   </div>
- </div>
-  <div class="row">
- <div class="col-md-6 offset-md-6">
-  <input type="submit" value="Submit" class="btn btn-info">
-  <input type="reset" value="Cancel" class="btn">
-  </div>
-  </div>
-  </form>
-   </div>
-  </div>
 </body>
 </html>

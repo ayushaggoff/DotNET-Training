@@ -158,7 +158,9 @@ Maharashtra: ["Mumbai","Pune","Nagpur"],
 Kerala: ["kochi","Kanpur"]
 }
 function makeSubmenu(value) {
-if(value.length==0) document.getElementById("selcity").innerHTML = "<option></option>";
+	
+if(value.length==0) 
+	document.getElementById("selcity").innerHTML = "<option></option>";
 else {
 var citiesOptions = "";
 for(cityId in citiesByState[value]) {
@@ -266,4 +268,9 @@ function ValidateForm1(id)
 		
 	 }
 	}
+}
+
+function viewDetails()
+{
+	
 }
