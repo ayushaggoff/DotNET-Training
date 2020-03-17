@@ -2,7 +2,7 @@
 <html>
 <head>
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
- <script src="myscript.js"></script>
+ <script src="checkformvalidation.js"></script>
 
 <title>Registration Page</title>
 </head>
@@ -16,17 +16,17 @@
 <div class="row">
  <div class="col-md-4">
 
-  <label for="name">Name*</label>
+  <label for="txtname">Name</label>
 
  </div>
   <div class="col-md-8">
- <input type="text" class="form-control" id="name" onkeyup=" ValidateForm1('name')" name="name" >
+ <input type="text" class="form-control" id="name" onkeyup="ValidateForm1('name')" name="name" >
  <span id="nvname"></span><br>
  </div>
  </div>
  <div class="row">
  <div class="col-md-4">
-  <label for="dob">Date Of Birth*</label>
+  <label for="dob">Date Of Birth</label>
    </div>
   <div class="col-md-8">
   <input type="date" class="form-control" id="dob" onkeyup=" ValidateForm1('dob')" name="dob" >
@@ -35,7 +35,7 @@
  </div>
   <div class="row">
  <div class="col-md-4">
-  <label for="telphone">Phone*</label>
+  <label for="telphone">Phone</label>
      </div>
   <div class="col-md-8">
   <input type="text" class="form-control" id="phone" onkeyup=" ValidateForm1('phone')" name="phone"  >
@@ -44,7 +44,7 @@
   </div>
     <div class="row">
  <div class="col-md-4">
-  <label for="email">Email*</label> 
+  <label for="email">Email</label> 
    </div>
   <div class="col-md-8">
   <input type="text" class="form-control" id="email" onkeyup=" ValidateForm1('email')" name="email">
@@ -53,7 +53,7 @@
   </div>
   <div class="row">
  <div class="col-md-4">
-  <label for="seldepartname">Department*</label>
+  <label for="seldepartname">Department</label>
    </div>
   <div class="col-md-8">
   <select id="seldepartname"  class="form-control">
@@ -71,7 +71,7 @@
   </div>
    <div class="row">
  <div class="col-md-4">
-  <label for="address">Address*</label>
+  <label for="txtaaddress">Address:</label>
      </div>
   <div class="col-md-8">
   <textarea name="address" class="form-control" rows="4" cols="40" id="address" onkeyup="ValidateForm1('address')" ></textarea>
@@ -80,7 +80,7 @@
   </div>
      <div class="row">
  <div class="col-md-4">
-  <label for="selstate">State*</label> 
+  <label for="selstate">State</label> 
    </div>
   <div class="col-md-8">
 <select id="selstate" size="1" onchange="makeSubmenu(this.value)" class="form-control" >
@@ -106,7 +106,7 @@
  
 	 <div class="row">
  <div class="col-md-4">
-  <label for="txtzip">Zip*:</label>
+  <label for="txtzip">Zip:</label>
   </div>
   <div class="col-md-8">
   <input type="text" id="zip"   onkeyup="ValidateForm1('zip')" class="form-control" name="zip">
@@ -115,7 +115,7 @@
   </div>
   <div class="row">
  <div class="col-md-4">
-  <label for="dob">Date Of Joining</label>
+  <label for="dob">Joining</label>
    </div>
   <div class="col-md-8">
   <input type="date" class="form-control" id="txtdateofjoin" name="txtdateofjoin" >
