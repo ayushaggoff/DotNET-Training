@@ -7,9 +7,9 @@
   const params = new URLSearchParams(document.location.search);
 var getName = params.get("name");
 const getDOB = params.get("dob");
-const getMobile=params.get("mob");
+const getMobile=params.get("phone");
 const getEmail=params.get("email");
-const getDepartment=params.get("department");
+const getDepartment=params.get("seldepartname");
 const getAddress=params.get("address");
 const getState=params.get("selstate");
 const getCity=params.get("selcity");
@@ -77,10 +77,10 @@ document.getElementById('empJoiningDate').value=getJoiningDate;
 	  <td id="zip"></td>
 	  <td id="joiningDate"></td>
 	  <td id="edit">
-	  <form action="EditBootstrapForm.html">
+	  <form action="EditDetail.html">
 	  <input type="hidden"  name="name" id="empName"/>
 	  <input type="hidden"  name="dob" id="empDob" />
-	  <input type="hidden"  name="mobile" id="empMobile" />
+	  <input type="hidden"  name="phone" id="empMobile" />
 	  <input type="hidden"  name="email" id="empEmail" />
 	  <input type="hidden"  name="dept" id="empDept" />
 	  <input type="hidden"  name="address" id="empAddress" />
@@ -88,8 +88,8 @@ document.getElementById('empJoiningDate').value=getJoiningDate;
 	  <input type="hidden" name="city" id="empCity" />
 	  <input type="hidden"  name="zip" id="empZip"/>
 	  <input type="hidden"  name="joiningDate" id="empJoiningDate" />
-	  <input type="submit" class="btn btn-secondary" value="Edit" onsubmit="Edit.html" />
-    <button type="button" class="btn btn-secondary">Delete</button></form></td>
+	  <input type="submit" class="btn btn-secondary" value="Edit"/>
+    <button type="button" class="btn btn-secondary" onclick="EditDetail.html">Delete</button></form></td>
     </tr>
   
   </tbody>

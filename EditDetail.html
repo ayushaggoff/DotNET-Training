@@ -2,20 +2,52 @@
 <html>
 <head>
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <script src="myscript.js"></script>
+<script>
+  const params = new URLSearchParams(document.location.search);
+var getName = params.get("name");
+const getDOB = params.get("dob");
+const getMobile=params.get("phone");
+const getEmail=params.get("email");
+const getDepartment=params.get("dept");
+const getAddress=params.get("address");
+const getState=params.get("state");
+const getCity=params.get("city");
+const getZip=params.get("zip");
+const getJoiningDate=params.get("joiningDate");
+alert(getCity);
 
-<title>Registration Page</title>
+window.onload = function RenderHtmlData(){
+alert(getCity);
+document.getElementById('name').value=getName;
+document.getElementById('dob').value=getDOB;
+document.getElementById('phone').value=getMobile;
+document.getElementById('email').value=getEmail;
+document.getElementById('seldepartname').value=getDepartment;
+document.getElementById('address').value=getAddress;
+document.getElementById('selstate').value=getState;
+document.getElementById('selcity').value=getCity;
+document.getElementById('zip').value=getZip;
+document.getElementById('txtdateofjoin').value=getJoiningDate;
+};
+
+  </script>
+
+<title>Edit Detail</title>
 </head>
-<body style="border-top:20px solid black" onload="resetSelection()" >
+<body style="border-top:20px solid black")" >
 <div class="row">
  <div class="col-md-4 offset-md-4">
- <form name="addEmployee" onsubmit="return ValidateForm()"  action="ViewDetail.html" method=get>
-    <h4>Add Employee</h4>
+
+ <form name="editEmployee"  action="ViewDetail.html" method=get>
+    <h4>Edit Employee Detail</h4>
 	<hr>
 <div class="row">
  <div class="col-md-4">
+
   <label for="name">Name<span style="color:red">*</span></label>
+
  </div>
   <div class="col-md-8">
  <input type="text" class="form-control" id="name" onkeyup=" ValidateForm1('name')" name="name" >
@@ -24,7 +56,7 @@
  </div>
  <div class="row">
  <div class="col-md-4">
-  <label for="dob">Date Of Birth<span style="color:red">*</span></label>
+    <label for="dob">Date Of Birth<span style="color:red">*</span></label>
    </div>
   <div class="col-md-8">
       <div class="input-group">
@@ -115,7 +147,19 @@
   <div class="col-md-8">
   <select id="selcity" name="selcity" class="form-control" >
   <option value="none" selected disabled hidden>Select the City</option>
-    <option></option>
+
+  </select><br>
+  </div>
+  </div>
+ 
+ <div class="row">
+ <div class="col-md-4">
+    <label for="try">try</label>
+	</div>
+  <div class="col-md-8">
+  <select id="try" name="try" class="form-control" >
+  <option value="none" selected disabled hidden>try</option>
+
   </select><br>
   </div>
   </div>
