@@ -16,10 +16,8 @@ const getState=params.get("state");
 const getCity=params.get("city");
 const getZip=params.get("zip");
 const getJoiningDate=params.get("joiningDate");
-alert(getCity);
 
 window.onload = function RenderHtmlData(){
-alert(getCity);
 document.getElementById('name').value=getName;
 document.getElementById('dob').value=getDOB;
 document.getElementById('phone').value=getMobile;
@@ -28,6 +26,7 @@ document.getElementById('seldepartname').value=getDepartment;
 document.getElementById('address').value=getAddress;
 document.getElementById('selstate').value=getState;
 document.getElementById('selcity').value=getCity;
+
 document.getElementById('zip').value=getZip;
 document.getElementById('txtdateofjoin').value=getJoiningDate;
 };
@@ -145,6 +144,7 @@ document.getElementById('txtdateofjoin').value=getJoiningDate;
     <label for="selcity">City</label>
 	</div>
   <div class="col-md-8">
+  
   <select id="selcity" name="selcity" class="form-control" >
   <option value="none" selected disabled hidden>Select the City</option>
 
