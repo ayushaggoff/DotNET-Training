@@ -83,7 +83,7 @@ namespace EmployeeService.API.Db
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("update Employees set Salary=@Salary where ID=@Id", con);
+                SqlCommand cmd = new SqlCommand("update Employees set Salary=@Salary where ID=@id", con);
                 cmd.Parameters.AddWithValue("@id",emp.Id);
                 cmd.Parameters.AddWithValue("@Salary",emp.Salary);
                  cmd.ExecuteNonQuery();

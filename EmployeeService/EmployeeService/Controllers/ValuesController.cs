@@ -29,7 +29,7 @@ namespace EmployeeService.Controllers
             objEmployee.InsertRecord(emp);
         }
 
-        public void UpdateSalaryRecord(API.Db.Employee emp)
+        public void PutSalaryRecord(API.Db.Employee emp)
         {
             objEmployee.UdateSalaryById(emp);
         }
