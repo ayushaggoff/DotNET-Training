@@ -3,14 +3,14 @@
 <head>
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  <script src="myscript.js"></script>
-
 <title>Registration Page</title>
 </head>
-<body style="border-top:20px solid black" onload="resetSelection()" >
+<body style="border-top:20px solid black" >
 <div class="row">
  <div class="col-md-4 offset-md-4">
- <form name="addEmployee" onsubmit="return ValidateForm()"  action="ViewDetail.html" method=get>
+ <form name="addEmployee" id="addEmployee"  action="ViewDetail.html" method=get>
     <h4>Add Employee</h4>
 	<hr>
 <div class="row">
@@ -18,7 +18,7 @@
   <label for="name">Name<span style="color:red">*</span></label>
  </div>
   <div class="col-md-8">
- <input type="text" class="form-control" id="name" onkeyup=" ValidateForm1('name')" name="name" >
+ <input type="text" class="form-control" id="name"  name="name" >
  <span id="nvname"></span><br>
  </div>
  </div>
@@ -28,7 +28,7 @@
    </div>
   <div class="col-md-8">
       <div class="input-group">
-  <input type="date" class="form-control" id="dob" onkeyup=" ValidateForm1('dob')" name="dob" >
+  <input type="date" class="form-control" id="dob" name="dob" >
     <div class="input-group-append">
         <span class="input-group-text"><i class="fa fa-calendar icon"></i> </span>
       </div>
@@ -46,7 +46,7 @@
 		<span class="input-group-text"> <i class="fa fa-phone icon"></i> 
 		</span>
       </div>    
-  <input type="text" class="form-control" id="phone" onkeyup=" ValidateForm1('phone')" name="phone"  >
+  <input type="text" class="form-control" id="phone" name="phone"  >
   </div>
   <span id="nvphone"></span><br>
   </div>
@@ -61,7 +61,7 @@
 		<span class="input-group-text"> <i class="fa fa-envelope icon"></i> 
 		</span>
       </div>    
-		<input type="text" class="form-control input-field" id="email" onkeyup=" ValidateForm1('email')" name="email"> 
+		<input type="email" class="form-control input-field" id="email"  name="email"> 
 	</div>
 
     <span id="nvemail"></span><br>
@@ -72,7 +72,7 @@
   <label for="seldepartname">Department<span style="color:red">*</span></label>
    </div>
   <div class="col-md-8">
-  <select id="seldepartname"   class="form-control" oninput=" OnSelectDepartmentValidation()" name="seldepartname">
+  <select id="seldepartname"   class="form-control" name="seldepartname">
   <option value="none" selected disabled  hidden>Select the department</option>
   <option value="IT">IT</option>
   <option value="Admin">Admin</option>
@@ -90,7 +90,7 @@
   <label for="address">Address<span style="color:red">*</span></label>
      </div>
   <div class="col-md-8">
-  <textarea name="address" class="form-control" rows="4" cols="40" id="address" onkeyup="ValidateForm1('address')" ></textarea>
+  <textarea name="address" class="form-control" rows="4" cols="40" id="address" ></textarea>
   <span id="nvaddress"></span><br>
   </div>
   </div>
@@ -99,7 +99,7 @@
   <label for="selstate">State<span style="color:red">*</span></label> 
    </div>
   <div class="col-md-8">
-<select id="selstate" name="selstate"  oninput="OnSelectStateValidation()"  onchange="makeSubmenu(this.value)"  class="form-control" >
+<select id="selstate" name="selstate"  class="form-control"  onchange="makeSubmenu(this.value)" >
   <option value="none" selected disabled hidden>Select the state</option>
   <option>Odisha</option>
 <option>Maharashtra</option>
@@ -125,7 +125,7 @@
   <label for="txtzip">Zip<span style="color:red">*</span></label>
   </div>
   <div class="col-md-8">
-  <input type="text" id="zip"   onkeyup="ValidateForm1('zip')" class="form-control" name="zip">
+  <input type="text" id="zip" class="form-control" name="zip">
   <span id="nvzip"></span><br>
   </div>
   </div>
@@ -145,7 +145,7 @@
  </div>
   <div class="row">
  <div class="col-md-6 offset-md-6">
-  <input type="submit" value="Submit" class="btn btn-info">
+  <input type="submit" id="submitBtn" value="Submit" class="btn btn-info">
   <input type="reset" value="Cancel" class="btn">
   </div>
   </div>
