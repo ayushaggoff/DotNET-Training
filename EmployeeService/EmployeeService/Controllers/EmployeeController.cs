@@ -12,6 +12,13 @@ namespace EmployeeService.Controllers
     public class EmployeeController : ApiController
     {
         Employee objEmployee = new Employee();
+
+      //  [System.Web.Http.Route("Employee.html")]
+        public void InsertRecord(Employee emp)
+        {
+            objEmployee.InsertRecord(emp);
+        }
+        /*
         [CheckRecord]
         public DataSet GetRecord(int id)
         {
@@ -36,5 +43,6 @@ namespace EmployeeService.Controllers
         {
             objEmployee.DeleteRecordById(id);
         }
+        */
     }
 }

@@ -15,6 +15,7 @@ namespace EmployeeService.Controllers
 {
     public class CheckRecord : ActionFilterAttribute
     {
+        /*
         Employee objEmployee = new Employee();
 
         public override void OnActionExecuting(HttpActionContext actionContext)
@@ -56,5 +57,6 @@ namespace EmployeeService.Controllers
                 return ds;
             }
         }
+        */
     }
 }
